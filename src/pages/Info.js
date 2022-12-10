@@ -1,7 +1,9 @@
 const Info = () => {
     return (
-        <section className="infoSection">
-            
-        </section>
+        <div className="main-container">
+            Information
+        </div>
     )
 }
+
+export default Info;
