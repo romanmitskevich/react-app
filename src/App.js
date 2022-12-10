@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Calendar from "./pages/Calendar";
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
                     <Route path="login" element={<Login setUser={setUser} />} />
                     <Route path="profile" element={
                         <ProtectedRoute user={user}><Profile user={user} /></ProtectedRoute>
+                    } />
+
+                    <Route path="calendar" element={
+                        <ProtectedRoute user={user}><Calendar user={user} /></ProtectedRoute>
                     } />
                 </Route>
             </Routes>

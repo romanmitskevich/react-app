@@ -6,9 +6,10 @@ const Navbar = ({ user }) => {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/calendar">Calendar</NavLink>
             <NavLink to="/info">Information</NavLink>
-            <span className="user-name">{user?.username}</span>
-            <NavLink to="/profile"><div className="user-photo"></div></NavLink>
-        </nav>
+            {user?.username ? <div className="profile-logo">
+                <NavLink to="/profile"><span className="user-name">{user.username}</span><div className="user-photo"></div></NavLink></div>
+                : <NavLink to="/login"><button className="login-button">Log in</button></NavLink>}
+        </nav >
     )
 }
 
