@@ -75,6 +75,11 @@ body{
 
 .user-name{
     display: none;
+    margin-right: -20%;
+
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .user-photo{

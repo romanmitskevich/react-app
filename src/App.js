@@ -14,7 +14,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<MainLayout />}>
+                <Route path="/" element={<MainLayout user={user} />}>
                     <Route path="/" element={<Home />} />
                     <Route path="info" element={<Info />} />
 

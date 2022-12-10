@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
     return (
         <nav className="navbar">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/calendar">Calendar</NavLink>
             <NavLink to="/info">Information</NavLink>
-            <NavLink to="/profile"><span className="user-name">Name</span><div className="user-photo"></div></NavLink>
+            <span className="user-name">{user?.username}</span>
+            <NavLink to="/profile"><div className="user-photo"></div></NavLink>
         </nav>
     )
 }

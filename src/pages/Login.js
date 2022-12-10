@@ -16,6 +16,7 @@ const Login = ({ setUser }) => {
         }
         setUser({ username: username, password: password });
         navigate("/profile");
+        document.querySelector(".user-name").style.display = "block";
     }
 
     return (
