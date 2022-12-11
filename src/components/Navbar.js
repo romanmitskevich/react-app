@@ -5,12 +5,12 @@ const Navbar = ({ user }) => {
 
     return (
         <nav className="navbar">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/calendar">Calendar</NavLink>
-            <NavLink to="/info">Information</NavLink>
+            <NavLink to="/">Главная</NavLink>
+            <NavLink to="/calendar">Календарь</NavLink>
+            <NavLink to="/info">Информация</NavLink>
             {user?.username || userName ? <div className="profile-logo">
                 <NavLink to="/profile"><span className="user-name">{userName}</span><div className="user-photo"></div></NavLink></div>
-                : <NavLink to="/login"><button className="login-button">Log in</button></NavLink>}
+                : <NavLink to="/login"><button className="login-button">Вход</button></NavLink>}
         </nav >
     )
 }

@@ -18,7 +18,7 @@ const Profile = ({ user, setUser }) => {
                         <p>Имя пользователя: {user?.username || localStorage.getItem("username")}</p>
                         <p>Текущая дата: {moment().format("DD-MM-YYYY")}</p>
                     </div>
-                    <button className="logout-button" onClick={logout}>Log out</button>
+                    <button className="logout-button" onClick={logout}>Выйти</button>
                 </div>
                 <div className="profile-events">События:
                     <p>{`11.11.2022: Meet - play dota 2`}</p>

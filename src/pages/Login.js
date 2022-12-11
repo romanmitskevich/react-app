@@ -39,18 +39,18 @@ const Login = ({ setUser }) => {
             <form className="login-form" onSubmit={handleSubmit} autoComplete="off">
                 <div className="form-logo"></div>
                 <div className="form-item">
-                    <input type="text" id="username" className="form-input" value={username} onChange={onUserNameChange} placeholder="Username" required></input>
+                    <input type="text" id="username" className="form-input" value={username} onChange={onUserNameChange} placeholder="Имя пользователя" required></input>
                 </div>
 
                 <div className="form-item">
-                    <input type="password" id="password" className="form-input" value={password} onChange={onPasswordChange} placeholder="Password" required></input>
+                    <input type="password" id="password" className="form-input" value={password} onChange={onPasswordChange} placeholder="Пароль" required></input>
                 </div>
 
                 {isError && <div className="form-error">Имя пользователя или пароль введены неверно!</div>}
 
                 <div className="form-item">
                     <button type="submit" className="submit-button">
-                        Log in
+                        Войти
                     </button>
                 </div>
             </form>
