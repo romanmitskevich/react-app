@@ -66,11 +66,22 @@ body{
     padding: 5px;
 }
 
-.navbar > a{
+.navlink{
     color: rgb(50, 50, 50);
     font-size: 20px;
     font-weight: 600;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    transition: all 0.4s ease 0s;
+}
+
+.navlink:hover{
+    color: rgb(150, 150, 150);
+}
+
+.navlink.active{
+    color: #504acc;
+    transform: scale(1.1);
 }
 
 .profile-logo a{
@@ -85,7 +96,6 @@ body{
     max-width: 60px;
     overflow: hidden;
 
-    color: rgb(50, 50, 50);
     font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -187,7 +197,7 @@ input::placeholder {
 
 .form-input:focus {
     border: 1px solid rgb(50, 50, 255);
-    box-shadow: 1px 1px 2px 2px rgba(50, 50, 255, 0.2)
+    box-shadow: 1px 1px 2px 2px rgba(50, 50, 255, 0.2);
 }
 
 .submit-button{
