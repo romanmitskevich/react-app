@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddEvent = ({ active, setActive, setEvent, events }) => {
+const AddEvent = ({ active, setActive, events }) => {
     const [date, setDate] = useState("");
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");

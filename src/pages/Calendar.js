@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 import "moment/locale/ru";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CalendarCell from "../components/CalendarCell";
 import AddEvent from "../components/AddEvent";
 import ChangeEvent from "../components/ChangeEvent";
@@ -18,17 +18,11 @@ const Calendar = () => {
     const nextHandler = () => setCurrentCalendar(next => next.clone().add(1, "month"));
     const todayHandler = () => setCurrentCalendar(moment());
 
-    // const [eventsState, setEventsState] = useState();
-
-    // useEffect(() => {
-    //     localStorage.setItem()
-    // }, [eventsState])
     const [addActive, setAddActive] = useState(false);
     const [changeActive, setChangeActive] = useState(false);
     const [searchActive, setSearchActive] = useState(false);
     const [data, setData] = useState("");
     const [event, setEvent] = useState("");
-    // const [event, setEvent] = useState(null);
 
     const displayAddWindow = () => {
         setAddActive(true);
@@ -75,9 +69,7 @@ const Calendar = () => {
                     {daysArray.map((dayItem, index) => <CalendarCell key={dayItem.unix()} dayItem={dayItem} index={index} day={day} event={events.find(item => dayItem.format("DD-MM-YYYY") === item.date)} />)}
                 </div>
             </div>
-            <AddEvent active={addActive} setActive={setAddActive}
-                // setEvent={setEvent}
-                events={events}></AddEvent>
+            <AddEvent active={addActive} setActive={setAddActive} events={events}></AddEvent>
             <ChangeEvent active={changeActive} setActive={setChangeActive}></ChangeEvent>
             <SearchEvent active={searchActive} setActive={setSearchActive} event={event}></SearchEvent>
         </div>

@@ -21,11 +21,11 @@ function App() {
 
                     <Route path="login" element={<Login setUser={setUser} />} />
                     <Route path="profile" element={
-                        <ProtectedRoute user={user}><Profile user={user} setUser={setUser} /></ProtectedRoute>
+                        <ProtectedRoute ><Profile user={user} setUser={setUser} /></ProtectedRoute>
                     } />
 
                     <Route path="calendar" element={
-                        <ProtectedRoute user={user}><Calendar /></ProtectedRoute>
+                        <ProtectedRoute ><Calendar /></ProtectedRoute>
                     } />
                 </Route>
             </Routes>

@@ -12,8 +12,6 @@ const CalendarCell = ({ dayItem, index, day, event }) => {
         )
     }
 
-    // const isEqual = dayItem.format("DD-MM-YYYY") === events.events[index]?.date ? true : false;
-
     return (
         <div className={isToday}>
             {index < 7

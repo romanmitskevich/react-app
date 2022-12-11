@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const SearchEvent = ({ active, setActive, event }) => {
     return (
         <div className={active ? "search-event-window active" : "search-event-window"} onClick={() => setActive(false)}>
