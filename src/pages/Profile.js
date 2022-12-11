@@ -10,6 +10,8 @@ const Profile = ({ user, setUser }) => {
         return navigate("/");
     }
 
+    const events = JSON.parse(localStorage.getItem("events"));
+
     return (
         <div className="main-container">
             <div className="profile-container">
@@ -20,9 +22,9 @@ const Profile = ({ user, setUser }) => {
                     </div>
                     <button className="logout-button" onClick={logout}>Выйти</button>
                 </div>
-                <div className="profile-events">События:
-                    <p>{`11.11.2022: Meet - play dota 2`}</p>
-                </div>
+                {events?.length > 0 ? <div className="profile-events">События:
+                    {events.map(item => <p>{item.date}: {item.title} - {item.text}</p>)}
+                </div> : <div className="profile-events">Нет событий</div>}
             </div>
         </div>
     )
