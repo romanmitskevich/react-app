@@ -84,7 +84,7 @@ body{
 .user-name{
     max-width: 60px;
     overflow: hidden;
-    
+
     color: rgb(50, 50, 50);
     font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -226,6 +226,8 @@ input::placeholder {
 
     width: 100%;
     height: 100%;
+
+    padding-bottom: 1%;
 }
 
 .calendar-panel{
@@ -234,7 +236,7 @@ input::placeholder {
     align-items: center;
 
     width: 100%;
-    height: 13%;
+    height: 12%;
     padding: 0 5%;
 
     background-color: rgb(215, 215, 215);
@@ -359,7 +361,7 @@ input::placeholder {
 }
 
 .current-date{
-    width: 80px;
+    width: 120px;
     margin-left: 5px;
     margin-right: 5px;
 
@@ -398,7 +400,7 @@ input::placeholder {
 
     border: 2px solid rgb(185, 185, 185);
     border-radius: 5px;
-    box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
     background-color: rgb(215, 215, 215);
 
     font-size: 14px;
@@ -415,8 +417,89 @@ input::placeholder {
 }
 
 .calendar-table{
+    display: flex;
+    flex-wrap: wrap;
+
     width: 90%;
     height: 80%;
 
-    background-color: #0011ff;
+    background-color: rgb(230, 230, 230);
+}
+
+.calendar-cell{
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100%/7);
+    height: calc(100%/6);
+
+    padding: 3px;
+
+    border: 2px solid rgb(190, 190, 190);
+}
+
+.calendar-cell.today{
+    border: 2px solid rgb(0, 0, 255);
+    background-color: rgba(200, 200, 255, 0.6);
+}
+
+.day-name{
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(150, 150, 150);
+}
+
+.cell-day{
+    width: 100%;
+    height: 20%;
+
+    padding-left: 5px;
+
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(140, 140, 140);
+}
+
+.cell-day.red{
+    color: red;
+}
+
+.calendar-event{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 80%;
+}
+
+.event-title{
+    height: 17%;
+
+    margin: 1% 0 2% 0;
+    
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(200, 200, 200);
+}
+
+.event-text{
+    max-height: 80%;
+    height: 100%;
+
+    overflow: hidden;
+    
+    font-size: 14px;
+    line-height: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(200, 200, 200);
+}
+
+.current{
+    color: rgba(0, 0, 0);
 }
