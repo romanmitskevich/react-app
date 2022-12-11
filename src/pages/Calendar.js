@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 import "moment/locale/ru";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CalendarCell from "../components/CalendarCell";
 
 const Calendar = () => {
@@ -14,6 +14,12 @@ const Calendar = () => {
     const previousHandler = () => setCurrentCalendar(prev => prev.clone().subtract(1, "month"));
     const nextHandler = () => setCurrentCalendar(next => next.clone().add(1, "month"));
     const todayHandler = () => setCurrentCalendar(moment());
+
+    // const [eventsState, setEventsState] = useState();
+
+    // useEffect(() => {
+    //     localStorage.setItem()
+    // }, [eventsState])
 
     return (
         <div className="main-container">

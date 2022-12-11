@@ -1,4 +1,4 @@
-import moment from "moment"; 
+import moment from "moment";
 
 const CalendarCell = ({ dayItem, index, day }) => {
     const names = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];

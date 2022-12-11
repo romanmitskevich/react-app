@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MainLayout from "./pages/MainLayout";
 import Info from "./pages/Info";
 import Home from "./pages/Home";
@@ -15,7 +15,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<MainLayout user={user} />}>
+                <Route element={<MainLayout user={user} />}>
                     <Route path="/" element={<Home />} />
                     <Route path="info" element={<Info />} />
 
@@ -25,7 +25,7 @@ function App() {
                     } />
 
                     <Route path="calendar" element={
-                        <ProtectedRoute user={user}><Calendar user={user} /></ProtectedRoute>
+                        <ProtectedRoute user={user}><Calendar /></ProtectedRoute>
                     } />
                 </Route>
             </Routes>
