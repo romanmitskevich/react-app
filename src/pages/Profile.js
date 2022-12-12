@@ -5,8 +5,9 @@ const Profile = ({ user, setUser }) => {
     const navigate = useNavigate();
 
     const logout = () => {
+        setUser("");
         localStorage.clear();
-        setUser(null);
+
         return navigate("/");
     }
 
